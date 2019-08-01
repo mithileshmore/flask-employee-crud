@@ -1,0 +1,49 @@
+<html>
+<style>
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+}
+</style>
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+	<body>
+		<h2 style="text-align: center;">Employee List</h2>
+		<input type="button" class="back-button" value="Back" onclick="window.history.back()" />
+		<table class="w3-table-all w3-centered">
+			<tr>	
+				<td>Employee Name</td>
+				<td>Employee Name</td>
+				<td colspan="2">Department</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>CS</td>
+				<td>IT</td>
+			</tr>
+			{% for employee in employees %}
+			<tr>
+				<td>{{employee.employee_name}}</td>
+				<td>{{employee.last_name}}</td>
+				{% if employee.department == "CS" %}
+				<td>CS</td>
+				<td>-</td>
+				{% endif %}
+				{% if employee.department == "IT" %}
+				<td>-</td>
+				<td>IT</td>
+				{% endif %}
+			</tr>
+			{% endfor %}
+		</table>
+	</body>
+</html>

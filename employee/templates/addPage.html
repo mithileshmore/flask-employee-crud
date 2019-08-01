@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">\
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<h1 style="text-align: center;">Add page</h1>
+<input type="button" class="back-button" value="Back" onclick="window.history.back()" />
+<form action="./add" method="POST">
+	<table class="w3-table-all w3-centered">
+		<tr>
+			<td><label>First Name:</label></td>
+			<td><input type="text" name=employeeName placeholder="First Name.." /></td>
+		</tr>
+		<tr>
+			<td><label>Last Name:</label></td>
+			<td><input type="text" name=lastName placeholder="Last Name.." /></td>
+		</tr>
+		<tr>
+			<td><label>Department:</label></td>
+			<td>
+				<select name="department">
+					<option>IT</option>
+					<option>CS</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+		<td><label>DOJ:</label></td>
+		<td><input type="date" name="dateOfJoining"></td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="Add" /></td>
+		</tr>		
+	</table>
+</form>

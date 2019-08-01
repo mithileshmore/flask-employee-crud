@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">\
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<h3 style="text-align: center;">Employees Working</h3>
+
+<table class="w3-table-all w3-centered">
+	<tr>
+		<td><a href="{{ url_for('add') }}"><button class="btn btn-default">Add Employees!</button></a></td>
+	</tr>
+	<tr>
+		<td><a href="{{ url_for('view') }}"><button class="btn btn-default">View Employees!</button></a></td>
+	</tr>
+	<tr>
+	    <td><a href="{{ url_for('delete') }}"><button class="btn btn-default">Delete Employees!</button></a></td>
+	</tr>
+	<tr>
+	    <td><a href="{{ url_for('update') }}"><button class="btn btn-default">Update Employees!</button></a></td>
+	</tr>
+	<tr>
+	    <td><a href="{{ url_for('logout') }}"><button class="btn btn-default">LogOut!</button></a></td>
+	</tr>
+</table>
+

@@ -1,0 +1,39 @@
+<html>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">\
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<body>
+		<h2 style="text-align: center;">Employee List</h2>
+		<input type="button" class="back-button" value="Back" onclick="window.history.back()" />
+		<table class="w3-table-all w3-centered">
+			<tr>
+				<td>Employee Name</td>
+				<td>First Name</td>
+				<td>Last Name</td>
+				<td>Department</td>
+				<td>Action</td>
+			</tr>
+			{% for employee in employees %}
+			<tr>
+				<td>{{employee.employee_name}}</td>
+				<form action="./update" method="POST">
+				<input type="hidden" value="{{employee.id}}" name="id" />
+				<td><input type="text" value="{{employee.employee_name}}" name="employeeName" /></td>
+				<td><input type="text" value="{{employee.last_name}}" name="lastName" /></td>
+				<td>
+					<select name="department">
+						<option {% if employee.department=="CS" %} selected {% endif %} >CS</option>
+						<option {% if employee.department=="IT" %} selected {% endif %} >IT</option>
+					</select>
+				</td>
+				<td><input class="btn btn-default" type="submit" value="Update" /></td>
+				</form>
+			</tr>
+			{% endfor %}
+		</table>
+	</body>
+</html>
+</html>
